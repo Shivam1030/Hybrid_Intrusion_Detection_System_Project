@@ -52,19 +52,20 @@ The system is trained and tested on the UNSW-NB15 dataset, which includes:
 ## Methodology
 
 1.	Signature-based detection: Rule-based matching for known attacks
+
 2.	Anomaly detection ensemble:
 
-o	Random Forest (class_weight=balanced)
+    o	Random Forest (class_weight=balanced)
 
-o	XGBoost (scale_pos_weight=3, GPU acceleration)
+    o	XGBoost (scale_pos_weight=3, GPU acceleration)
 
-o	Weighted soft voting for final prediction
+    o	Weighted soft voting for final prediction
 
-4.	Confidence thresholding:
+3.	Confidence thresholding:
 
-o	Attack if probability ≥ 0.90
+    o	Attack if probability ≥ 0.90
 
-o	Normal otherwise
+    o	Normal otherwise
 
 ## Training Configuration
 
