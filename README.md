@@ -1,6 +1,6 @@
-Hybrid Intrusion Detection System (IDS) Using Machine Learning and Confidence-Based Decision Mechanism
+# **Hybrid Intrusion Detection System (IDS) Using Machine Learning and Confidence-Based Decision Mechanism**
 
-Overview
+**Overview**
 
 This project implements a hybrid intrusion detection system (IDS) that combines:
 •	Signature-based detection for known threats
