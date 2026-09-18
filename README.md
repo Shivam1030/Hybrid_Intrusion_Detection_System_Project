@@ -1,14 +1,14 @@
-# **Hybrid Intrusion Detection System (IDS) Using Machine Learning and Confidence-Based Decision Mechanism**
+# Hybrid Intrusion Detection System (IDS) Using Machine Learning and Confidence-Based Decision Mechanism
 
-**Overview**
+## Overview
 
 This project implements a hybrid intrusion detection system (IDS) that combines:
 •	Signature-based detection for known threats
 •	Machine learning anomaly detection using a Random Forest + XGBoost ensemble
 
-The system introduces a confidence-aware decision mechanism with a 0.90 threshold, explicitly designed to reduce false positives and improve operational reliability. It is evaluated on the UNSW-NB15 dataset using a compact “Power 9” feature subset for efficiency and scalability.
+### The system introduces a confidence-aware decision mechanism with a 0.90 threshold, explicitly designed to reduce false positives and improve operational reliability. It is evaluated on the UNSW-NB15 dataset using a compact “Power 9” feature subset for efficiency and scalability.
 
-Features
+## Features
 
 •	Hybrid IDS framework: Signature + ML-based anomaly detection
 •	Weighted RF-XGBoost ensemble with soft voting (0.6 XGBoost, 0.4 RF)
@@ -16,7 +16,7 @@ Features
 •	Compact Power 9 feature set for reduced complexity and faster inference
 •	Comprehensive evaluation on UNSW-NB15 dataset with strong performance metrics
 
-Performance Highlights
+## Performance Highlights
 
 •	Accuracy: 94.6%
 •	Precision: 95.8%
@@ -24,18 +24,18 @@ Performance Highlights
 •	F1-Score: 94.0%
 •	False Positive Rate (FPR): 1.2%
 
-Compared to standalone classifiers:
+## Compared to standalone classifiers:
 
 •	Ensemble improves F1-score by 6.2% over XGBoost alone
 •	False positives reduced by 75%
 
-Dataset
+## Dataset
 
 The system is trained and tested on the UNSW-NB15 dataset, which includes:
 •	2.5M network flows
 •	9 attack families: Analysis, Backdoor, DoS, Exploits, Fuzzers, Generic, Reconnaissance, Shellcode, Worms
 
-Methodology
+## Methodology
 
 1.	Signature-based detection: Rule-based matching for known attacks
 2.	Anomaly detection ensemble:
@@ -46,30 +46,30 @@ o	Weighted soft voting for final prediction
 o	Attack if probability ≥ 0.90
 o	Normal otherwise
 
-Training Configuration
+## Training Configuration
 
 •	Random Forest: 200 estimators, max_depth=15
 •	XGBoost: 300 estimators, max_depth=8, learning_rate=0.1
 •	Validation: 5-fold stratified cross-validation
 •	Feature Selection: Power 9 (dur, spkts, dpkts, sbytes, dbytes, sttl, dttl, sload, dload)
 
-Results
+## Results
 
 •	Preserves 97.8% performance of full feature set with 82% lower complexity
 •	Inference time reduced by 4.7x
 •	Outperforms deep learning hybrids (CNN-GRU, CNN-LSTM, CNN-RNN) in efficiency and false positive control
 
-Future Work
+## Future Work
 
 •	Real-time streaming evaluation
 •	Adaptive threshold tuning based on traffic variability
 •	Extension to encrypted malicious traffic and advanced persistent threats (APTs)
 
-References
+## References
 
 This project builds upon prior research in hybrid IDS systems, including CNN-GRU, CNN-LSTM, CNN-RNN, ensemble methods, and domain-specific IDS approaches. Key references are included in the research paper.
 
-Authors
+## Authors
 
 •	Shivam
 •	Kushal Sharma
@@ -78,6 +78,6 @@ Authors
 •	Akshat Shakya
 •	Vivek Chaudhary
 
-License
+## License
 
-This project is released under the MIT License. You are free to use, modify, and distribute it with proper attribution.
+### This project is released under the MIT License. You are free to use, modify, and distribute it with proper attribution.
